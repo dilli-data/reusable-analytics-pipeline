@@ -152,18 +152,9 @@ great_expectations checkpoint run
 - Reduced reporting delays by 80%
 - Improved data quality and consistency
 
-## 🤝 Contributing
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## 📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 👥 Authors
-- Your Name - Initial work
+- Dilliraja Sundar
 
 ## 🙏 Acknowledgments
 - Thanks to all contributors and supporters
