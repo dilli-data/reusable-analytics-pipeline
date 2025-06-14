@@ -147,7 +147,7 @@ great_expectations checkpoint run
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 👥 Authors
-- Your Name - Initial work
+- Dilliraja Sundar
 
 ## 🙏 Acknowledgments
 - Thanks to all contributors and supporters
