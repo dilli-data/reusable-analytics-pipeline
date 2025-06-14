@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: peoplesoft
+    database: education_analytics
+    schema: raw
+    tables:
+      - name: ps_stdnt_car_term
+        description: "PeopleSoft Campus Solutions Student Career Term data"
+      - name: ps_acad_plan
+        description: "PeopleSoft Campus Solutions Academic Plan data"
+      - name: ps_stdnt_enrl
+        description: "PeopleSoft Campus Solutions Student Enrollment data"
+      - name: ps_personal_data
+        description: "PeopleSoft HR Personal Data"
+      - name: ps_job
+        description: "PeopleSoft HR Job data"
+      - name: ps_acad_advisor
+        description: "PeopleSoft HR Academic Advisor data"
+      - name: ps_financial_aid
+        description: "PeopleSoft Financial Aid data"
+      - name: ps_financial_aid_item
+        description: "PeopleSoft Financial Aid Item data"
+      - name: ps_financial_aid_term
+        description: "PeopleSoft Financial Aid Term data"
+
+  - name: canvas
+    database: education_analytics
+    schema: raw
+    tables:
+      - name: users
+        description: "Canvas LMS Users data"
+      - name: courses
+        description: "Canvas LMS Courses data"
+      - name: enrollments
+        description: "Canvas LMS Enrollments data"
+      - name: assignments
+        description: "Canvas LMS Assignments data"
+      - name: submissions
+        description: "Canvas LMS Submissions data" 
