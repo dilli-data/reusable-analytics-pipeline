@@ -86,14 +86,40 @@ cd sql
 snowsql -f setup.sql
 ```
 
-## 📈 Architecture
+## 🏗️ Architecture
 The pipeline follows a modern data architecture:
-1. Data ingestion from source systems
-2. Raw data storage in S3
-3. Data quality validation using Great Expectations
-4. Transformation using PySpark and dbt
-5. Loading into Snowflake data warehouse
-6. Orchestration using Airflow
+
+1. **Data ingestion from source systems**: PeopleSoft Campus Solutions, HR, Financial Aid, and Canvas LMS
+2. **Raw data storage in S3**
+3. **Data quality validation using Great Expectations**
+4. **Transformation using PySpark and dbt** (with models for PeopleSoft and Canvas)
+5. **Loading into Snowflake data warehouse**
+6. **Orchestration using Airflow**
+
+```mermaid
+flowchart TD
+    A["PeopleSoft Campus Solutions"] -->|"Student, Enrollment Data"| B["S3 Raw Layer"]
+    A2["PeopleSoft HR"] -->|"Faculty, Advisor Data"| B
+    A3["PeopleSoft Financial Aid"] -->|"Aid, Awards Data"| B
+    A4["Canvas LMS"] -->|"Course, Assignment Data"| B
+    B --> C["Great Expectations\nData Quality Validation"]
+    C --> D["PySpark\nPreprocessing"]
+    D --> E["dbt Models (PeopleSoft & Canvas)"]
+    E --> F["Snowflake Data Warehouse"]
+    F --> G["Dashboards & Analytics"]
+    H["Apache Airflow"] -.-> B
+    H -.-> C
+    H -.-> D
+    H -.-> E
+    H -.-> F
+    subgraph "Infra"
+      I["AWS Glue, Lambda, S3"]
+      J["Terraform (IaC)"]
+    end
+    I --> B
+    J --> I
+    J --> F
+```
 
 ## 🧪 Testing
 ```bash
