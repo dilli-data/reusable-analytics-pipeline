@@ -1,0 +1,11 @@
+student_id,first_name,last_name,date_of_birth,gender,ethnicity,first_generation_status,email
+S001,John,Smith,1995-05-15,M,White,N,john.smith@university.edu
+S002,Maria,Garcia,1996-08-22,F,Hispanic,Y,maria.garcia@university.edu
+S003,James,Chen,1995-11-30,M,Asian,N,james.chen@university.edu
+S004,Sarah,Johnson,1996-03-10,F,Black,Y,sarah.johnson@university.edu
+S005,Michael,Patel,1995-09-18,M,Asian,N,michael.patel@university.edu
+S006,Emily,Williams,1996-12-05,F,White,Y,emily.williams@university.edu
+S007,David,Kim,1995-07-25,M,Asian,N,david.kim@university.edu
+S008,Lisa,Martinez,1996-04-12,F,Hispanic,Y,lisa.martinez@university.edu
+S009,Robert,Brown,1995-10-08,M,Black,N,robert.brown@university.edu
+S010,Jennifer,Lee,1996-01-20,F,Asian,Y,jennifer.lee@university.edu 

@@ -1,0 +1,19 @@
+{
+  "expectation_suite_name": "student_data_expectations",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "student_id"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "gpa",
+        "min_value": 0,
+        "max_value": 4
+      }
+    }
+  ]
+}

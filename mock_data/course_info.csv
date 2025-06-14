@@ -1,0 +1,9 @@
+course_id,course_name,department,credits,instructor_id
+CS101,Introduction to Computer Science,Computer Science,3,I001
+MATH101,Calculus I,Mathematics,4,I002
+ENG101,Composition and Rhetoric,English,3,I003
+HIST101,World History,History,3,I004
+CS102,Data Structures,Computer Science,3,I001
+MATH102,Calculus II,Mathematics,4,I002
+ENG102,Advanced Composition,English,3,I003
+HIST102,American History,History,3,I004 

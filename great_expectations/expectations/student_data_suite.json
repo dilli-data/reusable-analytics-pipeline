@@ -1,0 +1,90 @@
+{
+    "meta": {
+        "great_expectations_version": "0.18.11",
+        "citations": [
+            {
+                "citation_date": "2024-01-01",
+                "comment": "Created by reusable analytics pipeline"
+            }
+        ]
+    },
+    "expectations": [
+        {
+            "expectation_type": "expect_table_columns_to_match_ordered_list",
+            "kwargs": {
+                "column_list": [
+                    "student_id",
+                    "first_name",
+                    "last_name",
+                    "date_of_birth",
+                    "gender",
+                    "ethnicity",
+                    "first_generation_status"
+                ]
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "student_id"
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_be_unique",
+            "kwargs": {
+                "column": "student_id"
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_match_regex",
+            "kwargs": {
+                "column": "email",
+                "regex": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_be_between",
+            "kwargs": {
+                "column": "grade",
+                "min_value": 0.0,
+                "max_value": 4.0
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_be_in_set",
+            "kwargs": {
+                "column": "enrollment_status",
+                "value_set": ["active", "graduated", "withdrawn", "on_leave"]
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_be_in_set",
+            "kwargs": {
+                "column": "gender",
+                "value_set": ["M", "F", "O", "U"]
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_be_in_set",
+            "kwargs": {
+                "column": "ethnicity",
+                "value_set": ["Asian", "Black", "Hispanic", "White", "Other", "Unknown"]
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_be_in_set",
+            "kwargs": {
+                "column": "first_generation_status",
+                "value_set": ["Y", "N", "U"]
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_be_between",
+            "kwargs": {
+                "column": "amount_awarded",
+                "min_value": 0,
+                "max_value": 100000
+            }
+        }
+    ]
+} 

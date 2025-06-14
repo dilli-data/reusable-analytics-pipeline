@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform.lock.hcl
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables
+.env
+.env.*
+
+# Airflow
+airflow.cfg
+airflow.db
+logs/
+dags/__pycache__/
+
+# dbt
+target/
+dbt_packages/
+logs/
+user.yml
+
+# Great Expectations
+great_expectations/uncommitted/
+great_expectations/plugins/
+
+# AWS
+.aws/
+aws.json
+
+# Snowflake
+snowflake_connection.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db 
