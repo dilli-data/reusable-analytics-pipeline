@@ -89,8 +89,8 @@ snowsql -f setup.sql
 ## 🏗️ Architecture
 The pipeline follows a modern data architecture:
 
-1. **Data ingestion from source systems**: PeopleSoft Campus Solutions, HR, Financial Aid, and Canvas LMS
-2. **Raw data storage in S3**
+1. **Data extraction from source systems**: Python scripts connect to PeopleSoft (Oracle DB) and Canvas LMS (REST API)
+2. **Raw data storage in S3**: Extracted CSVs are uploaded to S3 using a Python utility
 3. **Data quality validation using Great Expectations**
 4. **Transformation using PySpark and dbt** (with models for PeopleSoft and Canvas)
 5. **Loading into Snowflake data warehouse**
@@ -120,6 +120,22 @@ flowchart TD
     J --> I
     J --> F
 ```
+
+## 🚀 ETL Flow (Step-by-Step)
+1. **Extract PeopleSoft data**: Run `extract_peoplesoft.py` to pull data from Oracle DB and save as CSV
+2. **Extract Canvas LMS data**: Run `extract_canvas.py` to pull data from Canvas API and save as CSV
+3. **Upload to S3**: Run `upload_to_s3.py` to upload all CSVs in `mock_data/` to S3 raw layer
+4. **Validate data quality**: Run Great Expectations suite on S3 data
+5. **Preprocess with PySpark**: Run PySpark jobs to clean and join data
+6. **Transform with dbt**: Run dbt models for PeopleSoft and Canvas
+7. **Load to Snowflake**: Data lands in Snowflake for analytics
+8. **Orchestrate with Airflow**: Airflow DAG automates the entire pipeline
+
+## 🛠️ Scripts
+- `extract_peoplesoft.py`: Extracts data from PeopleSoft (Oracle DB)
+- `extract_canvas.py`: Extracts data from Canvas LMS (REST API)
+- `upload_to_s3.py`: Uploads extracted CSVs to S3
+- (More scripts for validation, transformation, and loading to follow)
 
 ## 🧪 Testing
 ```bash
